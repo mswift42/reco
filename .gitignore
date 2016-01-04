@@ -10,5 +10,6 @@ pom.xml.asc
 .lein-plugins/
 .lein-failures
 .nrepl-port
-/app/build.properties
+/app/boot.properties
+*.edn
 
