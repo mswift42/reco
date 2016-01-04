@@ -8,6 +8,7 @@
                  [org.clojure/clojurescript "1.7.170"]
                  [crisptrutski/boot-cljs-test "0.2.0-SNAPSHOT" :scope "test"]
                  [com.cemerick/piggieback "0.2.1" :scope "test"]
+                 [org.clojure/tools.nrepl "0.2.12" :scope "test"]
                  [weasel "0.7.0" :scope "test"]
                  [reagent "0.6.0-alpha"]])
 
