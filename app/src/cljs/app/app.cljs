@@ -11,7 +11,7 @@
     [:div.modal-content
      [:div.modal-header
       [:button.close {:data-dismiss "modal" :aria-label "close"}
-       [:span {:aria-hidden "true"} "&times;"]]]]]])
+       [:span {:aria-hidden "true"} "close"]]]]]])
 
 (defn input-component [value title]
   [:div.row
