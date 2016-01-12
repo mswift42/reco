@@ -1,8 +1,12 @@
 (ns app.app
   (:require [reagent.core :as reagent :refer [atom]]
-            [cljsjs.bootstrap]))
+            [cljsjs.bootstrap]
+            [app.colors :as colors]))
 
-(def app-db (atom {:showcolorpicker false}))
+
+
+(def app-db (atom {:showcolorpicker false
+                   :selected-color ""}))
 
 (defn modal-component []
   [:div.modal.fade {:tabIndex "-1" :role "dialog" :id "colorpicker"
@@ -12,6 +16,15 @@
      [:div.modal-header
       [:button.close {:data-dismiss "modal" :aria-label "close"}
        [:span {:aria-hidden "true"} "close"]]]]]])
+
+(defn cpick-component [content]
+  [:div#cpickcomponent
+   [:ul.nav.nav-tabs
+    [:li.active {:role "presentation"}
+     [:a {:href "#"} "HEX"]]
+    [:li {:role "presentation"}
+     [:a {:href "#"} "RGB"]]]
+   content])
 
 (defn input-component [value title]
   [:div.row
@@ -23,10 +36,13 @@
 
 
 
+
+
 (defn calling-component []
   [:div "Parent component"
    [input-component "#2a2a2a" "mainfg"]
-   [modal-component]])
+   [modal-component]
+   [cpick-component [:div [:p "some filler"]]]])
 
 
 
